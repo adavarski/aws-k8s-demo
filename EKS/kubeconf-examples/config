@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1EZ3dNakUxTURnd01Wb1hEVE14TURjek1URTFNRGd3TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTW0zCnMvUmJOd3J3dXU0L0tCOXJWRnBKRlVkV3RpOTFjZUxjQm5VQkRFajZhSk9IZFloTm1RanNWeFllYjFWTTFxUGsKNGZPZi9kWEhGeVFQc0hTems0NFdhSVc1bTlwNG1BbDlYVXFVL2FreVpCY0E5WW5jQy9jVDhYRDJ1TEQ2cERFaQozWTd5ZkxoL3JqTG1wbUlEK3NYU3FyZDFCekE5TTZHVlVGc01yNkZ1WXN3Mm1iVFlKTHpsV1dSbDhSNCs4cVdjCkRuaTZSUEFMNXRXKzRxdmhhWFVQWDFQeno5ZVlxRFU5NTZMODNvWHFpdE5UMVNuYkNWekNyYWlUMHJsQmoyeGkKdmZkd3o5aVZFbTVNV0FGd1gzUkR6djhLYzFNMnF2WTMvaXFMV0RmTVlPaU9lK3BPZGNRVWd5YnNEOEZCYzhqSwpmU0crckFxZjRXV3JsTDMwV1E4Q0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZJOHhnQTJwUkg3RlRyVkJNeHJ0ZDZtSDk1djJNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFDYjFtN1dzeHFrdko5bmREUVJJT2tUMWZzZ2NiOGVIcEtsbFYyNUJ4N1g1Z0NMR3N3UgpxbC9FTjhUbDJ1NXZXdVpiSkh2M0xSVmtiemRqSTFvdHJJZFY5UW5FdVlSN0ZSOEJhSFF5M3VwU2pTVUFOODdBCmMzOTRadXZRQ3pkWXZiVUpWMG5wT3VrdVlXTnNSaHRFVEFaVjhoZU5HbjYxNjFqNlQ2TlRXWktIVVhOYkVPUk8KOVM4UmY1Q1JkRFV4bFFTODFnZlBzd3VMUS9WSnBzM0oxcVpUTjlleWF5eXNHSzFxQmF0aTBlWUk0SmFWS2xFRgo5MXgvUERiWE5XcVFKcWhmK0lrNjdTWk8rdzhqam5Vb0FGeGhNSmhqWCtDOXBFaU0yZ3ZuVzBpeWd1TVJYKzF6CktPWWRZSlY1RlYwWmFadE4xSkVvd2ptNW1IM3pqN3N1M1N0ZgotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://2ACF0ACF62CACB72DBAEB14220D8E3C9.gr7.ap-southeast-2.eks.amazonaws.com
+  name: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+    user: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+  name: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+current-context: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-southeast-2:218645542363:cluster/mycluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-southeast-2
+      - eks
+      - get-token
+      - --cluster-name
+      - mycluster
+      command: aws
